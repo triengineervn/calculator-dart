@@ -98,15 +98,10 @@ class CalculatorAppState extends State<CalculatorApp> {
           //button area
           Row(
             children: [
-              button(
-                  text: "AC",
-                  buttonBgColor: operatorColor,
-                  tColor: orangeColor),
-              button(
-                  text: "<", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "AC", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "<", buttonBgColor: operatorColor, tColor: orangeColor),
               button(text: "", buttonBgColor: Colors.transparent),
-              button(
-                  text: "/", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "/", buttonBgColor: operatorColor, tColor: orangeColor),
             ],
           ),
           Row(
@@ -114,8 +109,7 @@ class CalculatorAppState extends State<CalculatorApp> {
               button(text: "7"),
               button(text: "8"),
               button(text: "9"),
-              button(
-                  text: "x", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "x", buttonBgColor: operatorColor, tColor: orangeColor),
             ],
           ),
           Row(
@@ -123,8 +117,7 @@ class CalculatorAppState extends State<CalculatorApp> {
               button(text: "4"),
               button(text: "5"),
               button(text: "6"),
-              button(
-                  text: "-", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "-", buttonBgColor: operatorColor, tColor: orangeColor),
             ],
           ),
           Row(
@@ -132,14 +125,12 @@ class CalculatorAppState extends State<CalculatorApp> {
               button(text: "1"),
               button(text: "2"),
               button(text: "3"),
-              button(
-                  text: "+", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "+", buttonBgColor: operatorColor, tColor: orangeColor),
             ],
           ),
           Row(
             children: [
-              button(
-                  text: "%", buttonBgColor: operatorColor, tColor: orangeColor),
+              button(text: "%", buttonBgColor: operatorColor, tColor: orangeColor),
               button(text: "0"),
               button(text: "."),
               button(text: "=", buttonBgColor: orangeColor),
@@ -156,11 +147,12 @@ class CalculatorAppState extends State<CalculatorApp> {
         margin: const EdgeInsets.all(8),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              padding: const EdgeInsets.all(22),
-              primary: buttonBgColor),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            backgroundColor: buttonBgColor,
+            padding: const EdgeInsets.all(22),
+          ),
           onPressed: () => onButtonClick(text),
           child: Text(
             text,
